@@ -10,13 +10,20 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "KUWEZU | Professionelle Kfz-Werkstatt",
-  description: "Ihre Kfz-Werkstatt für alle Leistungen. Qualität und Transparenz.",
+  title: "Test |  in Warendorf",
+  description: "Test in Warendorf — Ihr Experte für Autoglas, Bremsen, Inspektion und mehr. Jetzt Termin vereinbaren!",
   openGraph: {
-    title: "KUWEZU | Professionelle Kfz-Werkstatt",
-    description: "Ihre zuverlässige Kfz-Werkstatt.",
+    title: "Test |  in Warendorf",
+    description: "Test in Warendorf — Ihr Experte für Autoglas, Bremsen, Inspektion und mehr. Jetzt Termin vereinbaren!",
     type: "website",
     locale: "de_DE",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/logo.png", type: "image/png" },
+    ],
+    apple: "/logo.png",
   },
 };
 

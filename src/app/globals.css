@@ -1,44 +1,49 @@
 @import "tailwindcss";
 
-/* ── Brand Design Tokens ─────────────────────────────────────── */
+/* ── Brand Design Tokens ────────────────────────────────────────────────────── */
 @theme inline {
-  --color-brand-bg:            #0f0f0f;
-  --color-brand-surface:       #1a1a1a;
-  --color-brand-surface2:      #242424;
-  --color-brand-secondary:     #242424;
-  --color-brand-text:          #f0f0f0;
-  --color-brand-muted:         #a0a0a0;
-  --color-brand-border:        rgba(255,255,255,0.08);
-  --color-brand-primary:       #c9a84c;
-  --color-brand-primary-hover: #b8963e;
+  --color-brand-bg:            #f8f9fa;
+  --color-brand-surface:       #ffffff;
+  --color-brand-surface2:      #f0f0f0;
+  --color-brand-secondary:     #f0f0f0;
+  --color-brand-text:          #1a1a1a;
+  --color-brand-muted:         #555555;
+  --color-brand-border:        rgba(0,0,0,0.10);
+  --color-brand-primary:       #e30613;
+  --color-brand-primary-hover: #c80511;
   --font-sans: var(--font-geist-sans);
 }
 
+/* ── CSS Custom Properties (for use in inline styles / regular CSS) ──────── */
 :root {
-  --background:    #0f0f0f;
-  --foreground:    #f0f0f0;
-  --color-primary: #c9a84c;
-  --nav-shadow:    0 4px 24px rgba(0,0,0,0.5);
-  --card-shadow:   none;
+  --background:      #f8f9fa;
+  --foreground:      #1a1a1a;
+  --color-primary:   #e30613;
+  --nav-shadow:      0 1px 8px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.06);
+  --card-shadow:     0 2px 12px rgba(0,0,0,0.08);
 }
 
+/* ── Base Typography & Layout ─────────────────────────────────────────────── */
 html, body {
   background-color: var(--background);
   color: var(--foreground);
-  font-size: 1.125rem;
+  font-size: 1.125rem;   /* 18px minimum body text */
   line-height: 1.6;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 [id] { scroll-margin-top: 80px; }
 
+/* ── Focus ring — WCAG 2.4.7 ─────────────────────────────────────────────── */
 :focus-visible {
   outline: 3px solid var(--color-primary);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
+/* ── Skip link — WCAG 2.4.1 ──────────────────────────────────────────────── */
 .skip-link {
   position: absolute; top: -100%; left: 1rem; z-index: 9999;
   background: var(--color-primary); color: #ffffff; font-weight: 700;
@@ -48,6 +53,7 @@ html, body {
 }
 .skip-link:focus { top: 0; }
 
+/* ── Accessibility Modes ──────────────────────────────────────────────────── */
 html.a11y-contrast { filter: invert(1) hue-rotate(180deg); }
 html.a11y-contrast img, html.a11y-contrast video { filter: invert(1) hue-rotate(180deg); }
 html.a11y-no-motion *, html.a11y-no-motion *::before, html.a11y-no-motion *::after {
