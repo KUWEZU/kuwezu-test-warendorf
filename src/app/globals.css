@@ -21,13 +21,18 @@
   --color-primary:   #e30613;
   --nav-shadow:      0 1px 8px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.06);
   --card-shadow:     0 2px 12px rgba(0,0,0,0.08);
+  /* Navbar hero-overlay (non-scrolled state) */
+  --nav-hero-bg:          rgba(255,255,255,0.88);
+  --nav-hero-text:        #1a1a1a;
+  --nav-hero-text-muted:  #555555;
+  --nav-hero-hover-bg:    rgba(0,0,0,0.06);
 }
 
 /* ── Base Typography & Layout ─────────────────────────────────────────────── */
 html, body {
   background-color: var(--background);
   color: var(--foreground);
-  font-size: 1.125rem;   /* 18px minimum body text */
+  font-size: 1.125rem;
   line-height: 1.6;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
